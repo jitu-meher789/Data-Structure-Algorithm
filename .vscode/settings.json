@@ -1,0 +1,12 @@
+{
+    "java.project.sourcePaths": [
+        "leetcode_questions",
+        "Pepcoding/3_LinkedList/classIntr",
+        "Lecture_7",
+        "Lecture_20",
+        "Lecture_17",
+        "Lecture_10",
+        "Lecture_1",
+        "Pepcoding/3_LinkedList"
+    ]
+}

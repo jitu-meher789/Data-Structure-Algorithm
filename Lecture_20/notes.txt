@@ -1,0 +1,13 @@
+-----------------
+   Constructure |
+-----------------
+
+ 1. Constructure is a special type of function
+ 2. Constructure has no return type
+ 3. Constructure can't be private
+ 4. name of the Constructure is the same as the name of the class
+ 5. It helps to initilize the data member of the class
+ 6. Constructure has diffrent kind of  
+    i.   parameterized Constructure
+    ii.  non-parameterized Constructure
+    iii. default Constructure

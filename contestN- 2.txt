@@ -1,0 +1,400 @@
+questions No - 4
+
+Problem
+Your freedom
+Easy
+Dificulty
+100
+Max Points
+Status: Wrong Answer
+
+22.22/100 Pts
+Problem
+Submissions
+You have been taken prisoner by Alexander the Great. 
+He offers you your freedom if you can solve his string challenge.
+
+In a string s of lowercase letters, these letters form consecutive
+ groups of the same character. For example, a string like s = "cfxxxxzyy" has the 
+groups "c", "f", "xxxx", "z", and "yy".
+
+A group is identified by an interval [start, end], where start and end denote 
+the start and end indices (inclusive and 0 based) of the group. In the above example, 
+"xxxx" has the interval [3,6].
+
+A group is considered large if it has 3 or more characters. 
+Return the intervals of every large group sorted in increasing order by start index.
+
+Input Format
+The input contains the string S
+
+Constraints
+1 <= s.length() <= 1000
+The string s contains lowercase English letters only.
+
+Output Format
+Each line of the output contains 
+two integers i.e the start and end index of a group.
+
+Sample Input
+cbbxxxxzzzd
+Sample Output
+3 6
+7 9
+Explanation
+"xxxx" and “zzz” are the only large groups 
+present. “bb” and “d” are not considered large 
+because the elements don't appear at least thrice in a row.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+questions No - 3
+
+Watch the Clock
+Easy
+Dificulty
+100
+Max Points
+Status: Not Attempted
+
+0/100 Pts
+Problem
+Submissions
+Everyone thinks you are an idiot. One of your classmates
+ wants to prove it, so on your birthday he gifts you a binary watch.
+
+A binary watch has 4 LEDs on the top which represent the hours (0-11), 
+and the 6 LEDs on the bottom represent the minutes (0-59). Each LED represents 
+a zero or one, with the least significant bit on the right.
+
+Given an integer N which represents the number of LEDs that are currently on, 
+return all possible times the watch could represent. You may return the answer in any order.
+
+The hour must not contain a leading zero.
+
+Input Format
+An integer, N.
+
+Constraints
+0 <= N <= 10
+
+Output Format
+Space-separated strings showing the time.
+
+Sample Input
+1
+Sample Output
+0:01 0:02 0:04 0:08 0:16 0:32 1:00 2:00 4:00 8:00
+Explanation
+All possible time descriptions for one LED turned ON have been presented.
+
+
+
+
+
+
+
+
+
+
+
+questions No - 2
+The Sunday Lottery
+Medium
+Dificulty
+100
+Max Points
+Status: Not Attempted
+
+0/100 Pts
+Problem
+Submissions
+Vivek has bought a Lottery Ticket from The Sunday Lottery. 
+The tickets have a number engraved on them.
+He has an insider tip, that greater the ticket number, higher the winning probability.
+The Sunday Lottery also provides an option to their customers to change their Lottery Ticket, 
+where they would swap any two digits of the ticket number and replace the 
+existing ticket with the swapped one.
+You are given a number representing the Lottery Ticket. What would be Vivek’s Ticket number, 
+if he could use the option given by The Sunday Lottery based on the tip?
+Note: He may or may not use the option provided.
+
+Input Format
+First line contains an integer T, denoting the number of test cases. 
+Next T lines contain an integer, denoting the Lottery Number L.
+
+Constraints
+1 <= T <= 104
+1 <= L <= 108
+
+Output Format
+Print the Ticket Number with highest win probability for each test case on a new line.
+
+Sample Input
+2
+3845
+7731
+Sample Output
+8345
+7731
+Explanation
+3845, he could swap 3 and 8 to get 8345
+7731, no swap would provide a ticket with higher probability.
+
+
+
+
+
+
+
+
+
+
+
+
+
+questions No - 1
+
+The Ramayana
+Medium
+Dificulty
+100
+Max Points
+Status: Wrong Answer
+
+0/100 Pts
+Problem
+Submissions
+Shri Ram has an arrow holder which can have at max N arrows. 
+Initially the arrow holder is completely filled with N arrows.
+The fight continues till its end, starting from the 1st day.
+On each ith day Lakshman brings M arrows and fill the arrow holder 
+of Ram with as many arrows as he can using these M arrows.
+Ravan has a magical capacity to produce i arrows on ith day. 
+Now on each ith day of fight, Ravan destroys as many arrows of Ram as 
+he can using his i arrows. The fight will end on the day when arrows of 
+Ram in arrow holder becomes zero at the end of the day.
+You have to find on which day the fight will come to an end for the first time.
+Finally Ram will win at the end……
+
+Input Format
+Two space separated integers N and M -- denoting the capacity of 
+the arrow holder and the number of arrows added every day.
+
+Constraints
+1<=N,M<=10^18
+
+Output Format
+One integer denoting the day when arrow holder of 
+Ram will become empty for the first time.
+
+Sample Input
+32 5
+Sample Output
+12
+Explanation
+None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+contest = 3---date : 14.1.2023
+Problem
+Magic swap Number
+Medium
+Dificulty
+100
+Max Points
+Status: Not Attempted
+
+0/100 Pts
+Problem
+Submissions
+You are given an integer N. You can swap two digits at most once to get the maximum valued number and the swap is called as Magic Swap
+
+Print the value of N after performing Magic Swap operation on N .
+
+Input Format
+A positive Integer Number
+
+Constraints
+1<= N <= 108
+
+Output Format
+print N after performing Magic Swap
+
+Sample Input
+68391
+Sample Output
+98361
+Explanation
+Perform magic Swap , and swap 9 and 6 to generate 98361 which is the maximum possible value after performing swapping once.
+
+
+
+
+
+
+
+
+Problem
+Beautiful String
+Easy
+Dificulty
+100
+Max Points
+Status: Wrong Answer
+
+87.5/100 Pts
+Problem
+Submissions
+A string s is said to be Beautiful String if s can be palindrome after deleting at most one character from it.
+
+Given a string s , Print True if s is a beautiful string .
+
+Input Format
+Single line consists of a string s
+
+Constraints
+1 <= s.length <= 105
+
+Output Format
+Print "True" or "False"
+
+Sample Input
+raceacar
+Sample Output
+True
+Explanation
+we can transform string s ="raceacar" into a palindromic string after removing either 'a'(at index 4) or 'e'(at index 3)
+"racecar" or "racacar" both are palindromic strings , Hence the given string s is a Beautiful string
+
+
+
+
+
+
+
+
+Problem
+Sentence screen fitting
+Medium
+Dificulty
+100
+Max Points
+Status: Not Attempted
+
+0/100 Pts
+Problem
+Submissions
+Given a rows x cols screen and a sentence represented as a list of strings, print the number of times the given sentence can be fitted on the screen.
+
+The order of words in the sentence must remain unchanged, and a word cannot be split into two lines. A single space must separate two consecutive words in a line.
+
+Input Format
+First Line contains three space-separated Integers N(number of words in sentence ) , Rows and Cols .
+Second Line contains an array of strings (sentence)
+
+Constraints
+1 <= N , Rows , Cols <= 100
+1 <= word.length() <= 20
+
+Output Format
+Print the desired output .
+
+Sample Input
+3 3 6 
+a bcd e
+Sample Output
+2
+Explanation
+a-bcd- 
+e-a---
+bcd-e-
+The character '-' signifies an empty space on the screen.
+We can fit the given sentence two times in this screen board.
+
+
+
+
+
+
+
+Problem
+Subsets
+Medium
+Dificulty
+100
+Max Points
+Status: Not Attempted
+
+0/100 Pts
+Problem
+Submissions
+Given an integer array arr of unique elements, return all possible subsets (the power set).
+The solution set must not contain duplicate subsets.Print the solution in sorted order.
+Note: Please watch the output format once before submitting.
+
+Input Format
+First line takes an integer N(size of array) Second Line contains N space separated integers describing array
+
+Constraints
+1 <= N <= 10
+-100 <= arr[i] <= 100
+All arr[i] must be unique element.
+
+Output Format
+Print all possible subsets, Each subset is in new line and all subsets must be in sorted order.
+
+Sample Input
+3
+25 4 7
+Sample Output
+
+4 
+4 7 
+7 
+25 
+25 4 
+25 4 7 
+25 7 
+Explanation
+Total subsets are: [],[25],[25,4],[25,4,7],[4],[4,7],[7],[25,7].
+While the outputs are in sorted order.
