@@ -9,11 +9,9 @@ public class client {
         ll.addLast(40);
         ll.addLast(50);
 
-        System.out.println(ll.size());
-        System.out.println(ll.getAt(2));
-        System.out.println(ll.removeLast());
-        System.out.println(ll.size());
-        System.out.println(ll.getLast());
+       
+        String ans = ll.toString();
+        System.out.println(ans);
 
 
 

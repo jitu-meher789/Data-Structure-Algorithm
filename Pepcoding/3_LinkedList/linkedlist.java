@@ -22,7 +22,23 @@ public class linkedlist {
         return this.size == 0;
     }
 
-  
+    // display the linkedlist
+    @Override
+    public String toString(){
+        Node curr = this.head;
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+
+        while(curr != null) {
+            sb.append(curr.data);
+            if(curr.next != null) {
+                sb.append(", ");
+            }
+            curr = curr.next;
+        }
+        sb.append("]");
+        return sb.toString();
+    }
 
     
 
