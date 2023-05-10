@@ -245,4 +245,49 @@ public class linkedlist {
         return removeNodeAt(idx).data;
     }
 
+
+
+
+
+
+
+
+
+    // segregate odd eve in likedlist
+    public void oddEven() {
+        if(this.size == 0 || this.size == 1){
+            return;
+        }
+
+        Node odd = new Node(-1); // dummy node
+        Node op = odd;
+
+        Node even = new Node(-1); // dummy node
+        Node ep = even;
+
+        Node curr = this.head;
+
+
+        while(curr != null){
+            if(curr.data % 2 == 0){
+                ep.next = curr;
+                ep = ep.next;
+            }else{
+                op.next = curr;
+                op = op.next;
+            }
+            curr = curr.next;
+
+            op.next = even.next;
+            ep.next = null;
+
+            this.head = odd.next;
+
+            if(even.next != null){
+                this.tail = ep;
+            }else{
+                this.tail = op;
+            }
+        }
+    }
 }

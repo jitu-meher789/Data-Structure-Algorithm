@@ -52,4 +52,159 @@ public class leetcode {
         node.next = null;
         return head;
     }
+
+
+
+
+    // leetcode 83 ( remove duplicates from a linked list)
+    public ListNode removeDuplicates(ListNode head) {
+        if(head == null || head.next == null) {
+            return head;    
+        }
+
+        ListNode dummy = new ListNode(-101); // dummy node
+        ListNode dp = dummy;
+
+        ListNode curr = head;
+
+        while(curr != null) {
+            while(curr != null && dp.val == curr.val) {
+                ListNode forw =  curr.next;
+                curr.next = null; 
+                curr = forw;
+            }
+            dp.next = curr;
+            if(curr != null) {
+                curr = curr.next;
+                dp = dp.next;
+            }
+        }
+        return dummy.next;
+    }
+
+
+
+
+
+
+
+
+
+
+    // leetcode 82 (remove duplicates from sorted linkedlist II)
+    public ListNode removeDuplicatesII(ListNode head) {
+
+        if(head == null || head.next == null) return head;
+
+        ListNode dummy  = new ListNode(-1);
+        ListNode itr = dummy;
+        itr.next = head;
+        ListNode curr = head.next;
+
+        while(curr != null) {
+            boolean isLoopRun = false;
+            while(curr != null && itr.next.val == curr.val) {
+                isLoopRun = true;
+                curr = curr.next;
+            }
+
+            if(isLoopRun) {
+                itr.next = curr;
+            }else{
+                itr = itr.next;
+            }
+
+            if(curr != null){
+                curr = curr.next;
+            }
+        }
+        return dummy.next;
+    }
+
+
+
+
+
+
+
+    // leetcode 206 (reverse the linkedlist)
+    public ListNode reverseLinkedList(ListNode head) {
+        if(head == null || head.next == null) return head;
+
+        ListNode prev = null;
+        ListNode curr = head;
+
+        while(curr != null) {
+            ListNode forW = curr.next;
+
+            curr.next = prev;
+            prev = curr;
+
+            curr = forW;
+        }
+        return prev;
+    }
+
+
+
+
+
+
+
+
+
+    // pepcoding portal questions
+    private ListNode reverse(ListNode head) {
+        if(head == null || head.next == null) return head;
+
+        ListNode prev = null;
+        ListNode curr = head;
+
+        while(curr != null) {
+            ListNode forW = curr.next;
+
+            curr.next = prev;
+            prev = curr;
+
+            curr = forW;
+        }
+        return prev;
+    }
+    public ListNode addTowNumbers(ListNode l1, ListNode l2) {
+
+        l1 = reverse(l1);
+        l2 = reverse(l2);
+
+        ListNode dummy = new ListNode(-1);
+
+        ListNode c1 = l1;
+        ListNode c2 = l2;
+        int carry = 0;
+        ListNode prev = dummy;
+
+        while(c1 != null || c2 != null || carry != 0) {
+            int sum = carry + (c1 != null ? c1.val : 0) + (c2 != null ? c2.val : 0);
+
+            carry = sum / 10;
+
+            sum = sum % 10;
+
+            prev.next = new ListNode(sum);
+
+            prev = prev.next;
+
+            if(c1 != null)  c1 = c1.next;
+            if(c2 != null)  c2 = c2.next;
+            
+        }
+
+        ListNode head = dummy.next;
+
+        head = reverse(head);
+
+        l1 = reverse(l1);
+        l2 = reverse(l2);
+
+        return head;
+    }
 }
