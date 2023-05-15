@@ -207,4 +207,80 @@ public class leetcode {
 
         return head;
     }
+
+
+
+
+
+
+
+
+    // leetcode - 21 ( merge two sorted list )
+
+    public ListNode mergeTwoSortedList(ListNode l1, ListNode l2) {
+
+        ListNode c1 = l1, c2 = l2;
+        ListNode dummy = new ListNode(-101);
+
+        ListNode itr = dummy;
+
+        while(c1 != null && c2 != null) {
+            if(c1.val <= c2.val) {
+                itr.next = c1;
+                c1 = c1.next;
+            }else{
+                itr.next = c2;
+                c2 = c2.next;
+            }
+            itr = itr.next;
+        }
+
+        itr.next = c1 != null ? c1 : c2;
+        return dummy.next;
+    }
+
+
+
+
+
+
+
+
+    // leetcode - 160  (intersection point of two linkedlists)
+    public int LLofLinkedList(ListNode head){
+        if(head == null){
+            return 0;
+        }
+        int count = 0;
+        ListNode curr = head;
+
+        while(curr != null){
+            curr = curr.next;
+            count++;
+        }
+        return count;
+    }
+    public ListNode intersectionOFTowLinkedList(ListNode l1, ListNode l2) {
+
+        int lengOfL1 = LLofLinkedList(l1);
+        int lengOfL2 = LLofLinkedList(l2);
+
+        ListNode biggerListHead = lengOfL1 > lengOfL2 ? l1 : l2;
+        ListNode smallerListHead = lengOfL1 < lengOfL2 ? l1 : l2;
+
+        int diff = Math.abs(lengOfL1 - lengOfL2);
+
+        while(diff-- > 0){
+            biggerListHead = biggerListHead.next;
+        }
+
+        while(biggerListHead != smallerListHead) {
+            biggerListHead = biggerListHead.next;
+            smallerListHead = smallerListHead.next;
+        }
+
+
+        return smallerListHead != null ? smallerListHead : null;
+
+    }
 }
