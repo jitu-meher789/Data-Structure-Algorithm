@@ -28,7 +28,17 @@ public class queue {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
 
-        for(int i = 0; i <)
+        for(int i = 0; i < this.size; i++) {
+            int idx = (i + front) % this.maxSize;
+            sb.append(this.arr[idx]);
+
+            if(i != this.size - 1) {
+                sb.append(" ,");
+            }
+        }
+
+        sb.append("]");
+        return sb.toString();
     }
 
 
