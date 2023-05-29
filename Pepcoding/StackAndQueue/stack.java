@@ -6,7 +6,7 @@ public class stack {
     
 
 
-    private void initialize(int len){
+    protected void initialize(int len){
         this.arr = new int[len];
         this.tos = -1;
         this.size = 0;
@@ -49,7 +49,10 @@ public class stack {
         return this.size;
     }
 
-
+    public int maxSize() {
+        return this.maxSize;
+    }
+    
     public boolean isEmpty(){
         return this.size == 0;
     }

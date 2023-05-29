@@ -6,7 +6,7 @@ public class queue {
     private int back;
 
 
-    private void initialize(int len){
+    protected void initialize(int len){
         this.arr = new int[len];
         this.maxSize = len;
         this.size = 0;
@@ -66,6 +66,9 @@ public class queue {
         return this.size;
     }
 
+    public int maxSize() {
+        return this.maxSize;
+    }
 
 
 

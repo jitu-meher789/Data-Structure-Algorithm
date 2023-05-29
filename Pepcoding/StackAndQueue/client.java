@@ -47,7 +47,38 @@ public class client {
             System.out.println(st.removeFirst());
         }
     }
+    public static void dynamicStack () throws Exception {
+        dynamicStack st = new dynamicStack(10);
+
+        for(int i = 1; i <= 100; i++) {
+            st.push(i * 10);
+        }
+
+        System.out.println(st);
+
+        // while(st.size() != 5) {
+        //     System.out.println(st.pop());
+        // }
+    }
+
+
+
+
+
+    public static void DynamicQueue() throws Exception {
+        dynamicQueue que = new dynamicQueue(10);
+
+        for(int i = 1; i <= 100; i++) {
+            que.add(i * 10);
+        }
+
+        System.out.println(que);
+    }
+
+
+
+
     public static void main(String[] args) throws Exception {
-        stackTest();
+        dynamicStack();
     }
 }
