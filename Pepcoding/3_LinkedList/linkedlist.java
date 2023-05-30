@@ -259,11 +259,11 @@ public class linkedlist {
             return;
         }
 
-        Node odd = new Node(-1); // dummy node
-        Node op = odd;
+        Node dummyOdd = new Node(-1); // dummy node
+        Node op = dummyOdd;
 
-        Node even = new Node(-1); // dummy node
-        Node ep = even;
+        Node dummyEven = new Node(-1); // dummy node
+        Node ep = dummyEven;
 
         Node curr = this.head;
 
@@ -278,16 +278,16 @@ public class linkedlist {
             }
             curr = curr.next;
 
-            op.next = even.next;
+        }
+            op.next = dummyEven.next;
             ep.next = null;
 
-            this.head = odd.next;
+            this.head = dummyEven.next;
 
-            if(even.next != null){
+            if(dummyEven.next != null){
                 this.tail = ep;
             }else{
                 this.tail = op;
             }
-        }
     }
 }
