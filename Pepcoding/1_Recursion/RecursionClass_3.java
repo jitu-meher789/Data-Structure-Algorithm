@@ -235,14 +235,14 @@ public class RecursionClass_3 {
 
 
     public static void main(String[]args){
-        // System.out.println(subseq("1234"));
+        // System.out.println(subseq("ahbgdc"));
         // System.out.println(kpc("11"));
-        // System.out.println(decodeWays("11208"));
-        // System.out.println(getStirPaths(3));
+        // System.out.println(decodeWays("12"));
+        System.out.println(getStirPaths(4));
         // System.err.println(mazePath(0, 0, 2, 2));
-        System.out.println(mazePath_HDV(0,0,2,2));
+        // System.out.println(mazePath_HDV(0,0,2,2));
 
-        System.out.println(mazePath_HDV_multi(0,0,2,2));
+        // System.out.println(mazePath_HDV_multi(0,0,2,2));
 
     }
 }

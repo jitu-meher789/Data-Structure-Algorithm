@@ -338,10 +338,10 @@ public class RecursionWayUp_4 {
         // System.out.println(mazePath(0, 2, 0, 2,""));
         // System.out.println(mazePath_with_jumps(0,2,0,2,""));
         // System.out.println(print_permuatation("abc",""));
-        // print_permuatation_duplicate("aba");
+        print_permuatation_duplicate("abab");
         // System.out.println(decodeWays("112043",""));
-        int nums[] = {1,2,3};
-        System.out.println(permute(nums));
+        // int nums[] = {1,2,3};
+        // System.out.println(permute(nums));
 
     }
 }
