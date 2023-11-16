@@ -101,6 +101,5 @@ public class queue {
     public int remove() throws Exception {
         queueIsEmptyException();
         return remove_();
-
     }
 }

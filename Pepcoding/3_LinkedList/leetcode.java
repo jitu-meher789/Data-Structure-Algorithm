@@ -153,7 +153,7 @@ public class leetcode {
 
 
 
-    // pepcoding portal questions
+    // pepcoding portal questions (add tow numbers leetcode - 2)
     private ListNode reverse(ListNode head) {
         if(head == null || head.next == null) return head;
 
@@ -268,7 +268,7 @@ public class leetcode {
         ListNode biggerListHead = lengOfL1 > lengOfL2 ? l1 : l2;
         ListNode smallerListHead = lengOfL1 < lengOfL2 ? l1 : l2;
 
-        int diff = Math.abs(lengOfL1 - lengOfL2);
+        int diff = Math.max(lengOfL1,lengOfL2) - Math.min(lengOfL1,lengOfL2);
 
         while(diff-- > 0){
             biggerListHead = biggerListHead.next;
@@ -281,6 +281,26 @@ public class leetcode {
 
 
         return smallerListHead != null ? smallerListHead : null;
+
+    }
+
+
+
+    // leetcode 148 (sort the list(merge sort approach))
+    public ListNode sortList(ListNode head) {
+        if(head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode mid = middleNode(head);
+        ListNode nmid = mid.next;
+        mid.next = null;
+
+
+        ListNode leftSortedList =  sortList(head);
+        ListNode rightSortedList =  sortList(nmid);
+
+        return mergeTwoSortedList(leftSortedList, rightSortedList);
 
     }
 }

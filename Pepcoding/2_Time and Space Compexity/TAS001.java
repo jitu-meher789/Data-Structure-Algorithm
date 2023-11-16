@@ -189,7 +189,7 @@ public class TAS001 {
 
     public static void main(String[] args) {
         int[]arr = {13,7,3,5,19,9,11,3};
-        System.out.println(partition_Over_Pivot(arr,3));   
+        System.out.println(partition_Over_Pivot(arr,5));   
 
         for(int i = 0; i< arr.length; i++){
             System.out.print(arr[i] + " ");
