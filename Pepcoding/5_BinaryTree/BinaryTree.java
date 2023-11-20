@@ -212,17 +212,30 @@ public class BinaryTree {
     }
 
 
-    public static void printKLeveDown(Node node, int k, ArrayList<Node> ans) {
-        if(node == null || k < 0) {
+    public static void printKLeveDown(Node node, int k, Node block, ArrayList<Integer> ans) {
+        if(node == null || k < 0 || node == block) {
             return;
         }
 
         if(k == 0){
-            ans.add(node);
+            ans.add(node.data);
             return;
         }
 
-        printKLeveDown(node.left, k-1, ans);
-        printKLeveDown(node.right, k-1, ans);
+        printKLeveDown(node.left, k-1,block, ans);
+        printKLeveDown(node.right, k-1, block, ans);
+    }
+
+    public static ArrayList<Integer> kaway(Node node, int target, int k) {
+        ArrayList<Node> list = new ArrayList<Node>();
+        nodeToRootPath(node, target, list);
+
+        ArrayList<Integer> ans = new ArrayList<>();
+        Node block = null;
+        for(int i = 0; i < list.size(); i++) {
+            printKLeveDown(list.get(i), k - i, block, ans);
+            block = list.get(i);
+        }
+        return ans;
     }
 }
